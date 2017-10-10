@@ -52,7 +52,7 @@ class YouTube extends EventEmitter {
 	}
 
 	listen(timeout) {
-		setInterval(()=>{this.getChat()}, timeout);
+		var ytInterval = setInterval(()=>{this.getChat()}, timeout);
 		let lastRead = 0, item = {}, time = 0;
 		this.on('json', json => {
 			for (let i=0; i<json.items.length; i++) {
@@ -63,9 +63,11 @@ class YouTube extends EventEmitter {
 					this.emit('chat', item);
 				}
 			}
+		this.on('stop', event => {
+			clearInterval(ytInterval);
+		})
 		});
 	}
-
 }
 
 module.exports = YouTube;
