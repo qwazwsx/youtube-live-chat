@@ -64,9 +64,6 @@ class YouTube extends EventEmitter {
 				}
 			}
 		})
-		this.on('stop', event => {
-			this.stop();
-		});
 	}
 }
 
