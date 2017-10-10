@@ -63,6 +63,9 @@ class YouTube extends EventEmitter {
 					this.emit('chat', item);
 				}
 			}
+		})
+		this.on('stop', event => {
+			this.stop();
 		});
 	}
 }
