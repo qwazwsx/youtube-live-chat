@@ -1,5 +1,5 @@
 const get = require('request').get;
-const EventEmitter = require('events').EventEmitter;
+const EventEmitter = require('event-chains')
 
 class YouTube extends EventEmitter {
 	constructor(channelId, apiKey) {
@@ -63,9 +63,6 @@ class YouTube extends EventEmitter {
 					this.emit('chat', item);
 				}
 			}
-		this.on('stop', event => {
-			clearInterval(ytInterval);
-		})
 		});
 	}
 }
