@@ -1,6 +1,7 @@
 # youtube-live-chat
 
-[![Build Status](https://travis-ci.org/yuta0801/youtube-live-chat.svg?branch=master)](https://travis-ci.org/yuta0801/youtube-live-chat)
+[![Build Status](https://drone.henrikstabell.com/api/badges/Hennamann/youtube-live-chat/status.svg)](https://drone.henrikstabell.com/Hennamann/youtube-live-chat)
+
 
 A library for get YouTube live chats
 
