@@ -1,7 +1,10 @@
 # youtube-live-chat
 
-[![Build Status](https://drone.henrikstabell.com/api/badges/Hennamann/youtube-live-chat/status.svg)](https://drone.henrikstabell.com/Hennamann/youtube-live-chat)
+instead of inputing a channel ID you input a youtube ID of a specific livestream
 
+
+
+##below is unaltered from where I forked this from:
 
 A library for get YouTube live chats
 
