@@ -3,24 +3,27 @@ const EventEmitter = require('event-chains')
 
 var ytInterval;
 
+
+
 //sNum selects what livestream from a certain channel to view
 //default = 0
 //pretty sure its sorted by when the livestreams were started (maybe when they were supposed to start in the case of an event)
-var sNum = 0
-var videoIdDebug = false
+//var sNum = 0
+//var videoIdDebug = false
 
 var chatRefreshTimeout = 1000;
 
 class YouTube extends EventEmitter {
-	constructor(channelId, apiKey,streamNum,debugVideoId) {
+	constructor(videoId, apiKey) {
 		super();
-		this.id = channelId;
+		//this.id = channelId;
 		this.key = apiKey;
-		sNum = streamNum;
-		videoIdDebug = debugVideoId;
-		this.getLive();
+		//sNum = streamNum;
+		this.liveId  = videoId;
+		this.getChatId();
 	}
 
+	/* //not used
 	getLive() {
 		
 		if (!videoIdDebug){
@@ -43,7 +46,8 @@ class YouTube extends EventEmitter {
 			this.getChatId();
 
 		}
-	}
+	} */
+	
 
 	getChatId() {
 		get({url: `https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=${this.liveId}&key=${this.key}`, json: true}, (err, res, json) => {
