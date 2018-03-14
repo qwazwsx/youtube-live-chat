@@ -2,6 +2,16 @@
 
 A library for getting YouTube live chats
 
+example of how this can be used: 
+
+https://github.com/qwazwsx/controllable-webcams-live
+
+live chat bot demo:
+
+https://www.youtube.com/channel/UC_Ei9gZYiwyR8pBUr91X82Q?
+
+
+
 ## Demo
 
 this demo will print all messages and print the amount of messages gotten per refresh of the chat (demo of new chatRefreshed call) 
