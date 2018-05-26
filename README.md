@@ -4,7 +4,7 @@ A library for getting YouTube live chats
 
 example of how this can be used: 
 
-https://github.com/qwazwsx/controllable-webcams-live
+https://github.com/qwazwsx/controllable-webcams-live-chatbot
 
 live chat bot demo:
 
